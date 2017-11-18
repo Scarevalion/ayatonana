@@ -1,0 +1,27 @@
+{
+  "name": "ayatonana",
+  "version": "0.0.1",
+  "description": "Utility bot for discord with social interactions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5unkEn/ayatonana.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "utility"
+  ],
+  "author": "5unkEn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5unkEn/ayatonana/issues"
+  },
+  "homepage": "https://github.com/5unkEn/ayatonana#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}
