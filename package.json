@@ -4,6 +4,7 @@
   "description": "Utility bot for discord with social interactions",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node --presets es2015 index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,9 @@
   },
   "homepage": "https://github.com/5unkEn/ayatonana#readme",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "discord.js": "^11.2.1",
+    "uws": "^0.14.5"
   }
 }

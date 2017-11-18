@@ -1,19 +1,8 @@
-// NPM Dependencies
-const Discord = require('discord.js');
+import Environment from "./config.json";
+import Client from "./src/Client";
 
-// Local Dependencies
-const Environment = require('./config.json');
+import AyaInteractions from './interactions/Aya.json';
+import NanaInteractions from './interactions/Nana.json';
 
-const client = new Discord.Client();
-
-client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-client.on('message', message => {
-    if (message.content === 'ping') {
-        message.channel.send('pong');
-    }
-});
-
-client.login(Environment.clientToken);
+const client = new Client(Environment, { "Aya": AyaInteractions, "Nana": NanaInteractions });
+client.run();

@@ -1,4 +1,11 @@
 {
-    "ownerId": "",
-    "clientToken": ""
+    "defaultCommandToken": "!",
+    "client":  {
+        "ownerId": "",
+        "token": ""
+    },
+    "messageHooks": [
+        { "name": "CommandHook", "channels": [], "enabled": true },
+        { "name": "ImageChannelHook", "channels": ["waifus"], "enabled": false }
+    ]
 }
