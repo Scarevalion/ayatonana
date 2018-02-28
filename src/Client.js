@@ -19,6 +19,7 @@ class Client {
     connect() {
         this.client.login(this.environment.client.token);
         console.log(this.personnalityInteractions.Aya.serverBoot);
+        console.log(this.personnalityInteractions.Nana.serverBoot);
     }
 
     run() {
@@ -26,6 +27,7 @@ class Client {
         
         this.client.on('ready', () => {
             console.log(this.personnalityInteractions.Aya.serverReady);
+            console.log(this.personnalityInteractions.Nana.serverReady);
         });
 
         this.client.on('message', (message) => {

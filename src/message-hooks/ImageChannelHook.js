@@ -13,7 +13,7 @@ class ImageChannelHook extends MessageHook {
             return message.content === "" && message.attachments.first().filename.match(/\.(jpe?g|gif|png)$/i);
         }
         
-        return false;        
+        return false;
     }
 
     run(message) { }
