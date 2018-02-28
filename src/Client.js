@@ -16,12 +16,18 @@ class Client {
         this.messageHooks = this.hooker.getHooks();
     }
 
+    /**
+     * Logs the application in to Discord
+     */
     connect() {
         this.client.login(this.environment.client.token);
         console.log(this.personnalityInteractions.Aya.serverBoot);
         console.log(this.personnalityInteractions.Nana.serverBoot);
     }
 
+    /**
+     * Launches the application and starts the message listener
+     */
     run() {
         this.connect();
         

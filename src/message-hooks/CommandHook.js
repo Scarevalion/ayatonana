@@ -1,8 +1,16 @@
 import MessageHook from '../MessageHook';
 
+import HelloCommand from '../commands/HelloCommand';
+import RollCommand from '../commands/RollCommand';
+
 class CommandHook extends MessageHook {
     constructor(environmentConfig, options) {
         super(environmentConfig, options);
+
+        this.commands = {
+            'hello': new HelloCommand(environmentConfig),
+            'roll': new RollCommand(environmentConfig)
+        }
     }
 
     validate(message) {
@@ -13,7 +21,12 @@ class CommandHook extends MessageHook {
     }
 
     run(message) {
-        message.channel.send('Commands are WIP');
+        var trigger = this.getCommandTrigger(message);
+        if (this.commands[trigger] !== undefined) { this.commands[trigger].run(message); }
+    }
+
+    getCommandTrigger(message) {
+        return message.content.substr(this.environmentConfig.defaultCommandToken.length).split(' ')[0];
     }
 }
 
