@@ -1,10 +1,16 @@
+import Group from './arguments/Group';
+import Line from './arguments/Line';
 import Numeric from './arguments/Numeric';
+import User from './arguments/User';
 import Word from './arguments/Word';
 
 class ArgumentBuilder {
     constructor() {
         this.argumentTypes = {
+            'group': Group,
+            'line': Line,
             'numeric': Numeric,
+            'user': User,
             'word': Word
         }
     }

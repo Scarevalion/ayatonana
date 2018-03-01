@@ -1,7 +1,6 @@
 import Command from '../Command';
 
 class RollCommand extends Command {
-
     constructor(environmentConfig) {
         super(environmentConfig);
         

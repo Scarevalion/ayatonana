@@ -22,7 +22,7 @@ class HelloCommand extends Command {
             return "5unkEn is a panda";
         }
         
-        return hello(args);
+        return this.hello(args);
     }
 }
 

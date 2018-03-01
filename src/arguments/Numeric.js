@@ -3,9 +3,6 @@ import Argument from '../Argument';
 class Numeric extends Argument {
     constructor() {
         super();
-        
-        this.content = '';
-        this.value = undefined;
     }
 
     cut(content) {

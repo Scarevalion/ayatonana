@@ -1,14 +1,13 @@
 import Argument from '../Argument';
 
-class Word extends Argument {
+class Line extends Argument {
     constructor() {
         super();
     }
 
     cut(content) {
-        var splitContent = content.split(' ');
-        this.content = splitContent[0];
-        return splitContent.slice(1).join(' ');
+        this.content = content;
+        return '';
     }
 
     parse() {
@@ -20,4 +19,4 @@ class Word extends Argument {
     }
 }
 
-export default Word;
+export default Line;

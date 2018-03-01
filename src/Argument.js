@@ -1,5 +1,8 @@
 class Argument {
     constructor() {
+        this.content = '';
+        this.value = undefined;
+        
         if (this.cut === undefined) {
             throw new TypeError("Argument: must override cut method");
         }
