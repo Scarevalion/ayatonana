@@ -5,19 +5,24 @@ class HelloCommand extends Command {
         super(environmentConfig);
         
         this.overloads = [
-            { label: 'hello', arguments: [ { type: 'word', label: 'person' } ] }
+            { label: 'hello', arguments: [] },
+            { label: 'customHello', arguments: [ { type: 'word', label: 'person' } ] }
         ]
     }
 
     hello(args) {
+        return "こんにちは～";
+    }
+
+    customHello(args) {
         if (args.person.value === 'dante') {
-            return "Dante is a futa loli lover";
+            return "ロリコンさんこんにちは～";
         }
         if (args.person.value === '5unken') {
             return "5unkEn is a panda";
         }
         
-        return "こんにちは～";
+        return hello(args);
     }
 }
 

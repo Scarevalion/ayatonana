@@ -29,7 +29,7 @@ class Command {
         this.overloads.forEach(overload => {
             var buildResults = this.argumentBuilder.build(argumentsString, overload.arguments);
 
-            if (buildResults.success && buildResults.args.count === overload.arguments.count) {
+            if (buildResults.success) {
                 selectedOverload = overload.label;
                 builtArguments = buildResults.args;
             }
