@@ -1,3 +1,5 @@
+#!/usr/bin/env node 
+
 import Environment from "./config.json";
 import Client from "./src/Client";
 

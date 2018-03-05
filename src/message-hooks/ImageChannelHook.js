@@ -13,6 +13,7 @@ class ImageChannelHook extends MessageHook {
     run(message) { }
 
     failedValidation(message) {
+      message.reply("Vous n'êtes pas censé poster de liens ou d'images ici, merci d'aller dans les galeries pour ça.")
         message.delete();
     }
 }
