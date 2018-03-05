@@ -1,4 +1,3 @@
-import CommandHook from './message-hooks/CommandHook';
 import ImageChannelHook from './message-hooks/ImageChannelHook';
 
 class Hooker {
@@ -9,7 +8,6 @@ class Hooker {
     constructor(environmentConfig) {
         this.environmentConfig = environmentConfig;
         this.hooks = {
-            CommandHook: CommandHook,
             ImageChannelHook: ImageChannelHook
         };
     }

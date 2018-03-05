@@ -6,16 +6,10 @@ class ImageChannelHook extends MessageHook {
     }
 
     validate(message) {
-        if (message.attachments.size === 0) {
-            return message.content.match(/(?:([^:/?#]+):)?(?:\/\/([^/?#]*))?([^?#]*\.(?:jpe?g|gif|png))(?:\?([^#]*))?(?:#(.*))?/i) !== null;
+            if (message.attachments.size > 0 || message.embeds.size > 0 )
+              return false
+            return true;
         }
-        if (message.attachments.size === 1) {
-            return message.content === "" && message.attachments.first().filename.match(/\.(jpe?g|gif|png)$/i);
-        }
-        
-        return false;
-    }
-
     run(message) { }
 
     failedValidation(message) {
